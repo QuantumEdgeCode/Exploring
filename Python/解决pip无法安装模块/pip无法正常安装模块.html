@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+</style>
+
+</head><center>
+
+<body lang=ZH-CN style='word-wrap:break-word;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+<dd><h1>页面维护：Sean@aiepn.com</h1></dd>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>本页内容较多请耐心浏览</p>
+
+<p class=MsoNormal><span lang=EN-US>------------------------pip</span>无法正常安装模块<span
+lang=EN-US>---------------</span></p>
+
+<p class=MsoNormal><span lang=EN-US>------------Pycharm</span>模板安装失败解决方法<span
+lang=EN-US>-.txt------------</span></p>
+
+<p class=MsoNormal><span lang=EN-US>------------------------------------------------------------</span></p>
+
+<p class=MsoNormal>在<span lang=EN-US>Pycharm </span>安装目录找到文件<span lang=EN-US>packaging_tool.py</span></p>
+
+<p class=MsoNormal>找不到使用全局检索</p>
+
+<p class=MsoNormal>修改以下两行</p>
+
+<p class=MsoNormal><span lang=EN-US>----------------------</span>修改前<span
+lang=EN-US>---------------------------</span></p>
+
+<p class=MsoNormal><span lang=EN-US>def do_install(pkgs):</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; run_pip(['install'] +
+pkgs)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>def do_uninstall(pkgs):</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; run_pip(['uninstall',
+'-y'] + pkgs)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>------------------------</span>修改后<span
+lang=EN-US>----------------------------</span></p>
+
+<p class=MsoNormal><span lang=EN-US>def do_install(pkgs):</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; try:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+from pip import main</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; except:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+from pip._internal import main</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; return main()</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; run_pip(['install'] +
+pkgs)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>def do_uninstall(pkgs):</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; try:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+from pip import main</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; except:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+from pip._internal import main</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; return main()</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; run_pip(['uninstall',
+'-y'] + pkgs)</span></p></div></center>
+<a href="./Pycharm模板安装失败解决方法.zip" class="MenuLink" abc"2" aii"3"><Center>Pycharm模板安装失败解决方法.zip</Center></a>
+<a href="./Pycharm模板安装失败解决方法.txt" class="MenuLink" abc"2" aii"3"><Center>Pycharm模板安装失败解决方法.txt</Center></a>
+<a href="./pip国内镜像源.txt" class="MenuLink" abc"2" aii"3"><Center>其他 ：pip国内镜像源查看</Center></br></a></body></html>
